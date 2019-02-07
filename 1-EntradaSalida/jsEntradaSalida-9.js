@@ -14,5 +14,7 @@ function MostrarAumento()
 
     resultado = sueldo + parcial;
 
+    alert("el aumento es de " + "$" + parcial);
+
     document.getElementById("resultado").value = resultado;
 }
