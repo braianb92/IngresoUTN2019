@@ -8,12 +8,14 @@ function MostrarDescuento()
     var parcial;
     var resultado;
 
-    importe = parseInt(document.getElementById("importe").value);
+    importe = parseFloat(document.getElementById("importe").value);
 
     parcial = (importe * 25) / 100;
 
     resultado = importe - parcial;
 
-    document.getElementById("resultado").value = resultado;
+    alert("El descuento efectuado es de $" + parcial.toFixed(2));
+
+    document.getElementById("resultado").value = resultado.toFixed(2);
 	
 }
