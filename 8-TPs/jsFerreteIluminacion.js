@@ -9,35 +9,56 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio() {
+    
     var precioUnitario;
     var cantidad;
-    var unidad;
-    var preciofinal;
-
-
+    var importeapagar;
+    var descuento;
+    var mensaje = "El Importe a pagar es $";
 
     cantidad = parseInt(document.getElementById("Cantidad").value);
 
     precioUnitario = 35;
 
-    unidad = cantidad * precioUnitario;
+    importeapagar = cantidad * precioUnitario;
 
-    document.getElementById("precioDescuento").value = unidad;
+    marca = document.getElementById("Marca").value;
+
+    document.getElementById("precioDescuento").value = importeapagar;
 
 
     if (cantidad >= 6)
      {
-        preciofinal = unidad / 2;
-
-
-        document.getElementById("precioDescuento").value = preciofinal.toFixed(2);
+        descuento = precioUnitario * 50 / 100;
+        importeapagar = (cantidad * precioUnitario) - descuento;
+        document.getElementById("precioDescuento").value = descuento;
     }
 
-    else if (cantidad == 5)
+    else if (cantidad == 5 )
+    {
+        if ( marca == "ArgentinaLuz")
+        {descuento = precioUnitario * 50 / 100;
+            importeapagar = (cantidad * precioUnitario) - descuento;
+            document.getElementById("precioDescuento").value = descuento;
+        }
+        else
+        {
+            
+        }
+    }
+
+    else if (cantidad == 4)
     {
         
     }
 
+    else if ( cantidad == 3)
+    {
+       
+    }
+    
+
+alert(mensaje + importeapagar );
 
 
 }
