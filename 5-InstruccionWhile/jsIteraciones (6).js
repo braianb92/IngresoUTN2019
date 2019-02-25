@@ -1,20 +1,22 @@
 function Mostrar()
 {
 
-	var contador=0;
+	var contador=1;
 	var acumulador=0;
+	var num;
 
-	while (acumulador < 6 )
+
+	while (contador < 6 )
 	{
-		acumulador = parseInt(prompt("Ingrese el numero"));
+		num = parseInt(prompt("Ingrese el numero"));
 
-		contador = acumulador + contador;
+		acumulador = acumulador + num;
 
-		acumulador++
-
-
+		contador++;
 
 	}
+
+	
 
 	
 
