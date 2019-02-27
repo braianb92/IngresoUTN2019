@@ -10,15 +10,22 @@ function Mostrar()
 do
 {
 	num = parseInt(prompt("Ingrese un numero:"));
+	
+	while (isNaN(num))
+	{
+		num = parseInt(prompt("Eso no es un numero. Ingrese un numero:"));
+	}
+	
 	if (num >= 0)
 	{	
-	positivo += num;
+	positivo = positivo + num;
 	}
 	else
 	{
 	flag = false;
-	negativo *= num;
+	negativo = negativo * num;
 	}
+	
 	respuesta = confirm("¿Desea continuar?")
 
 } while (respuesta );
@@ -27,6 +34,12 @@ do
 
 
 document.getElementById('suma').value=positivo;
+
+if (flag)
+{
+	negativo = 0;
+}
+
 document.getElementById('producto').value=negativo;
 
 }//FIN DE LA FUNCIÓN
